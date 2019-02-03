@@ -74,13 +74,3 @@ function minify() {
 
 exports.build = series(cleanDist, merge, umdDist, minify);
 exports.default = exports.build;
-
-/*exports.build = series(
-  clean,
-  parallel(
-    cssTranspile,
-    series(jsTranspile, jsBundle)
-  ),
-  parallel(cssMinify, jsMinify),
-  publish
-);*/
